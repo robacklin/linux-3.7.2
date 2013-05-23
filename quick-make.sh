@@ -1,16 +1,20 @@
 #!/bin/sh
 
-if [ -z ${CFG_TARGET} ] ; then
+if [ -z "${CFG_TARGET}" ] ; then
 	CFG_TARGET=`pwd`/target
+	echo "${CFG_TARGET}"
 fi
-if [ -z ${CFG_SOURCE} ] ; then
+if [ -z "${CFG_SOURCE}" ] ; then
 	CFG_SOURCE=`pwd`/build
+	echo "${CFG_SOURCE}"
 fi
-if [ -z ${CFG_LINUX_CONFIG} ] ; then
+if [ -z "${CFG_LINUX_CONFIG}" ] ; then
 	CFG_LINUX_CONFIG=i386_defconfig
+	echo "${CFG_LINUX_CONFIG}"
 fi
-if [ -z ${CFG_LINUX_IMAGE} ] ; then
+if [ -z "${CFG_LINUX_IMAGE}" ] ; then
 	CFG_LINUX_IMAGE=bzImage
+	echo "${CFG_LINUX_IMAGE}"
 fi
 
 mkdir -p $CFG_TARGET
