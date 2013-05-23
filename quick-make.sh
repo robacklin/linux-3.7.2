@@ -1,8 +1,11 @@
 #!/bin/sh
 
-CFG_TARGET=`pwd`/target
-CFG_SOURCE=`pwd`/build
-
+if [ -z ${CFG_TARGET} ] ; then
+	CFG_TARGET=`pwd`/target
+fi
+if [ -z ${CFG_SOURCE} ] ; then
+	CFG_SOURCE=`pwd`/build
+fi
 if [ -z ${CFG_LINUX_CONFIG} ] ; then
 	CFG_LINUX_CONFIG=i386_defconfig
 fi
